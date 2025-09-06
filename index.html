@@ -5,40 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roblox Islands Value List</title>
   <style>
+    /* Animated gradient background */
     body {
       font-family: Arial, sans-serif;
-      background: #121212;
-      color: #f5f5f5;
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      background: linear-gradient(-45deg, #1e1e1e, #121212, #1a1a40, #2a1a40);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #f5f5f5;
     }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
     header {
-      background: #1e1e1e;
       text-align: center;
       padding: 20px;
       font-size: 2rem;
       font-weight: bold;
       color: #00ffcc;
     }
+
     .container {
       max-width: 800px;
       margin: 20px auto;
-      background: #1c1c1c;
+      background: rgba(28, 28, 28, 0.85); /* semi-transparent for readability */
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
     }
+
     ul {
       list-style: none;
       padding: 0;
     }
+
     li {
-      background: #222;
+      background: rgba(34, 34, 34, 0.8);
       margin: 8px 0;
       padding: 12px;
       border-radius: 8px;
       font-size: 1.1rem;
     }
+
     footer {
       text-align: center;
       padding: 15px;

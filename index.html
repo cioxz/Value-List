@@ -5,24 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Roblox Islands Value List</title>
   <style>
-    /* Animated gradient background */
+    /* Reset */
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      min-height: 100vh;
-      background: linear-gradient(-45deg, #1e1e1e, #121212, #1a1a40, #2a1a40);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
+      font-family: Arial, sans-serif;
       color: #f5f5f5;
+      overflow-x: hidden;
     }
 
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
+    /* Animated stripe background */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: black;
     }
 
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    path {
+      fill: none;
+      stroke: white;
+      stroke-width: 2;
+      opacity: 0.3;
+      animation: move 6s ease-in-out infinite alternate;
+    }
+
+    @keyframes move {
+      0% {
+        stroke-dasharray: 50 400;
+        stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dasharray: 300 150;
+        stroke-dashoffset: -200;
+      }
+    }
+
+    /* Content styling */
     header {
       text-align: center;
       padding: 20px;
@@ -34,7 +61,7 @@
     .container {
       max-width: 800px;
       margin: 20px auto;
-      background: rgba(28, 28, 28, 0.85); /* semi-transparent for readability */
+      background: rgba(28, 28, 28, 0.85); /* transparent background for readability */
       padding: 20px;
       border-radius: 12px;
       box-shadow: 0 0 15px rgba(0,0,0,0.6);
@@ -63,6 +90,18 @@
   </style>
 </head>
 <body>
+  <!-- Animated background -->
+  <div class="background">
+    <svg viewBox="0 0 800 600" preserveAspectRatio="none">
+      <path d="M 0 100 Q 200 200 400 100 T 800 100" />
+      <path d="M 0 200 Q 200 300 400 200 T 800 200" />
+      <path d="M 0 300 Q 200 400 400 300 T 800 300" />
+      <path d="M 0 400 Q 200 500 400 400 T 800 400" />
+      <path d="M 0 500 Q 200 600 400 500 T 800 500" />
+    </svg>
+  </div>
+
+  <!-- Main content -->
   <header>Roblox Islands Value List</header>
   <div class="container">
     <ul>
@@ -111,6 +150,7 @@
       <li>Xmas Shovel → 900m</li>
     </ul>
   </div>
+
   <footer>
     Made by- Ethemcio1999 | Cioxzz USN9J | Discord: Cioxz
   </footer>
